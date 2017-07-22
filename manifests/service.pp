@@ -3,7 +3,7 @@ class ntp::service (
   String $service_ensure       = $ntp::service_ensure, 
   Boolean $service_enable      = $ntp::service_enable,
   Boolean $service_hasstatus   = $ntp::service_hasstatus,
-  Boolean $service_hassrestart = $ntp::service_hassrestart,
+  Boolean $service_hasrestart  = $ntp::service_hasrestart,
 
 ) {  
    service { 'ntp':
@@ -11,6 +11,6 @@ class ntp::service (
      enable      => $service_enable,
      name        => $service_name,
      hasstatus   => $service_hasstatus,
-     hassrestart => $service_hassrestart,
+     hasrestart  => $service_hasrestart,
    }
 }
